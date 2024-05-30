@@ -18,6 +18,7 @@ fn main(
     msg_hash: [u8; 32]
 ) {
     // We assume the bytes are in big endian format so we convert them to little endian
+
     let sig_biguint = LargeInteger::from_bytes(reverse_bytes_array(sig));
     let pubkey_biguint = LargeInteger::from_bytes(reverse_bytes_array(pubkey));
     let final_e_biguint = LargeInteger::from_bytes(reverse_bytes_array(final_e));
